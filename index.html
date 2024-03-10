@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnzipIt || By Sawlew</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="dist/output.css"> -->
+    <style>
+        #home{
+            background: url(asset/desktop.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="font-mono bg-[#98b5b2] scroll-smooth">
+    <header class="bg-[#060916] text-[#98b5b2] fixed w-full top-0 z-50">
+        <div class="flex justify-between items-center h-16 w-[90%] mx-auto">
+            <h1 class="text-3xl font-bold">UnZipIt</h1>
+            <ion-icon name="menu" id="menu" class="md:hidden text-[#98b5b2] text-4xl cursor-pointer"></ion-icon>
+            <nav class="hidden md:block">
+                <ul class="flex gap-10 text-xl font-semibold">
+                    <li><a href="#home" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Home</a></li>
+                    <li><a href="#features" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Features</a></li>
+                    <li><a href="#about" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main  class="">
+        <section id="home" class="relative">
+            <div class="w-[90%] mx-auto flex-col-reverse flex md:flex-row justify-center items-center py-16">
+                <div class="text-[#060916] md:w-1/2 text-center md:text-left">
+                    <!-- <h1 class="text-7xl">UnZipIt</h1> -->
+                    <img src="asset/unzipitbysawlew.png" alt="">
+                    <p class="mb-10 font-semibold">EXTRACT YOUR ZIP FILE WITH EASE</p>
+                    <a href="https://sawlew.github.io/Portfolio-Project-MVP/" class="border-2 font-semibold border-[#060916] px-5 py-3 duration-100 ease-linear active:text-[#060916] active:border-[#060916] hover:border-white hover:text-white rounded-sm">Get Started</a>
+                </div>
+                <dotlottie-player class="" src="https://lottie.host/a5da9340-e190-4050-915f-991c2be0bcfa/EIdxxMTJ1q.json" background="" speed="2" style="width: 100%;" direction="-1" loop autoPlay />
+            </div>
+            <div class="absolute bg-white h-auto w-full top-0">
+
+            </div>
+        </section>
+        <section id="features" class="bg-[#060916]">
+            <h1 class="text-[#98b5b2] text-center pt-16 text-3xl ">Features</h1>
+            <div class="flex flex-col gap-10 py-8">
+                <div class="feature bg-[#98b5b2] w-[90%] lg:w-1/2 mx-auto flex flex-col justify-center items-center p-5 rounded-sm">
+                    <video src="asset/simple.mp4" alt="Feature 1" autoplay loop></video>
+                    <h2 class="font-bold text-xl py-3">Simple Interface</h2>
+                    <p class="text-center">Easily extract ZIP files with our user-friendly interface. No complex settings or configurations required.</p>
+                </div>
+                <div class="feature bg-[#98b5b2] w-[90%] lg:w-1/2 mx-auto flex flex-col justify-center items-center p-5 rounded-sm">
+                    <video src="asset/offline.mp4" alt="Feature 1" autoplay loop></video>
+                    <h2 class="font-bold text-xl py-3">Offline Functionality</h2>
+                    <p class="text-center">Since it's a web application, only the first time visiting the domain requires internet. The whole functionality works without internet.</p>
+                </div>
+                <div class="feature bg-[#98b5b2] w-[90%] lg:w-1/2 mx-auto flex flex-col justify-center items-center p-5 rounded-sm">
+                    <video src="asset/flash.mp4" alt="Feature 1" autoplay loop></video>
+                    <h2 class="font-bold text-xl py-3">Fast Extraction</h2>
+                    <p class="text-center">Quickly extract large ZIP archives with our efficient extraction process, saving you time.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="bg-[#98b5b2] lg:h-screen">
+            <h1 class="text-[#060916] text-center pt-16 text-3xl ">About</h1>
+            <div class="w-[90%] mx-auto text-center py-8">
+                <p>
+                    UnzipIt was born out of a shared frustration with the cumbersome process of dealing with compressed files. As students at Holberton School, we often found ourselves needing to extract ZIP files for various projects and assignments. However, existing solutions were either too complex or lacked the features we needed.
+                </p>
+                <br>
+                <p>
+                    Determined to simplify this process, we embarked on a journey to create a user-friendly web app that would streamline file extraction. Over the course of several weeks, we collaborated closely, combining our expertise in web development to bring UnzipIt to life.
+                </p>
+                <br>
+                <p>
+                    This project is not just a requirement for Holberton School; it's a testament to our passion for solving real-world problems through technology. We are proud to present UnzipIt as a Portfolio Project, showcasing our skills and dedication to innovation.
+                </p>
+                <br>
+                <hr class="border-[#060916]">
+                <br>
+
+                <p>
+                    Connect with us on <a href="https://www.linkedin.com/in/sawlew" target="_blank">LinkedIn</a>, <a href="https://github.com/sawlew" target="_blank">GitHub</a>, and <a href="https://twitter.com/sawlew" target="_blank">Twitter</a>.
+                </p>
+                <p>
+                    Check out the project repository on <a href="https://github.com/sawlew/Portfolio-Project-MVP" target="_blank">GitHub</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="h-16 bg-[#060916] flex justify-center items-center">
+        <p class="text-[#98b5b2] text-sm text-center">Copyright&nbsp;&copy; 2024 sawlew | All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
