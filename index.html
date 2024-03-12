@@ -9,20 +9,16 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="dist/output.css"> -->
-    <style>
-        #home{
-            background: url(asset/desktop.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
-<body class="font-mono bg-[#98b5b2] scroll-smooth">
+<body class="relative font-mono bg-[#98b5b2] scroll-smooth">
     <header class="bg-[#060916] text-[#98b5b2] fixed w-full top-0 z-50">
         <div class="flex justify-between items-center h-16 w-[90%] mx-auto">
             <h1 class="text-3xl font-bold">UnZipIt</h1>
-            <ion-icon name="menu" id="menu" class="md:hidden text-[#98b5b2] text-4xl cursor-pointer"></ion-icon>
+            <div class="md:hidden flex justify-center items-center">
+                <ion-icon name="menu" id="menu" onclick="openMenu()" class="text-[#98b5b2] text-4xl cursor-pointer"></ion-icon>
+                <ion-icon name="close-outline" id="close" onclick="closeMenu()" class="hidden text-[#98b5b2] text-4xl cursor-pointer"></ion-icon>
+            </div>
+            
             <nav class="hidden md:block">
                 <ul class="flex gap-10 text-xl font-semibold">
                     <li><a href="#home" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Home</a></li>
@@ -32,8 +28,13 @@
             </nav>
         </div>
     </header>
+    <div id="dropDown" class="fixed md:hidden bg-[#060916] opacity-90 text-[#98b5b2] text-4xl flex flex-col justify-center items-center gap-10 w-full p-10 z-10 top-[4rem] duration-300 ease-linear translate-y-[-100%]">
+        <a onclick="closeMenu()" href="#home" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Home</a>
+        <a onclick="closeMenu()" href="#features" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Features</a>
+        <a onclick="closeMenu()" href="#about" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">About</a>
+    </div>
     <main  class="">
-        <section id="home" class="relative">
+        <section id="home" class="relative bg-[url('asset/desktop.png')] bg-center bg-no-repeat bg-cover">
             <div class="w-[90%] mx-auto flex-col-reverse flex md:flex-row justify-center items-center py-16">
                 <div class="text-[#060916] md:w-1/2 text-center md:text-left">
                     <!-- <h1 class="text-7xl">UnZipIt</h1> -->
@@ -97,5 +98,23 @@
     <footer class="h-16 bg-[#060916] flex justify-center items-center">
         <p class="text-[#98b5b2] text-sm text-center">Copyright&nbsp;&copy; 2024 sawlew | All Rights Reserved.</p>
     </footer>
+
+    <script>
+        let open = document.getElementById('menu');
+        let close = document.getElementById('close');
+        let dropDown = document.getElementById('dropDown');
+
+        function openMenu(){
+            dropDown.classList.remove('translate-y-[-100%]');
+            close.classList.remove('hidden');
+            open.classList.add('hidden');
+        }
+
+        function closeMenu(){
+            dropDown.classList.add('translate-y-[-100%]');
+            close.classList.add('hidden');
+            open.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
