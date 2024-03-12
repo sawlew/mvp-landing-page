@@ -28,7 +28,7 @@
             </nav>
         </div>
     </header>
-    <div id="dropDown" class="fixed md:hidden bg-[#060916] opacity-90 text-[#98b5b2] text-4xl flex flex-col justify-center items-center gap-10 w-full p-10 z-10 top-[4rem] duration-300 ease-linear translate-y-[-100%]">
+    <div id="dropDown" class="fixed md:hidden bg-[#060916] opacity-90 text-[#98b5b2] text-4xl flex flex-col justify-center items-center gap-10 w-full p-10 z-10 top-[4rem] duration-300 ease-linear translate-y-[-130%]">
         <a onclick="closeMenu()" href="#home" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Home</a>
         <a onclick="closeMenu()" href="#features" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">Features</a>
         <a onclick="closeMenu()" href="#about" class="border-transparent border-b-4 hover:border-b-[#98b5b2] duration-300 ease-linear">About</a>
@@ -113,13 +113,13 @@
         let dropDown = document.getElementById('dropDown');
 
         function openMenu(){
-            dropDown.classList.remove('translate-y-[-100%]');
+            dropDown.classList.remove('translate-y-[-130%]');
             close.classList.remove('hidden');
             open.classList.add('hidden');
         }
 
         function closeMenu(){
-            dropDown.classList.add('translate-y-[-100%]');
+            dropDown.classList.add('translate-y-[-130%]');
             close.classList.add('hidden');
             open.classList.remove('hidden');
         }
